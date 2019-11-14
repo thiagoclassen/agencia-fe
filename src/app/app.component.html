@@ -7,13 +7,13 @@
   <mat-sidenav-container class="example-sidenav-container">
     <mat-sidenav #snav>
       <mat-nav-list>
-        <a mat-list-item routerLink=".">Vagas</a>
-        <a mat-list-item routerLink=".">Curriculos</a>
+        <a mat-list-item routerLink="./vagas" (click)="snav.toggle()">Vagas</a>
+        <a mat-list-item routerLink="./curriculos" (click)="snav.toggle()">Curriculos</a>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      Content
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

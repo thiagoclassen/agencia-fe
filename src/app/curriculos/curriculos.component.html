@@ -1,0 +1,10 @@
+<mat-nav-list>
+    <mat-list-item *ngFor="let curriculo of curriculos">
+       <a matLine href="...">{{ curriculo.nome }} - {{ curriculo.area }}</a>
+       <button mat-icon-button >
+          <mat-icon>info</mat-icon>
+       </button>
+    </mat-list-item>
+  </mat-nav-list>
+
+  <button mat-raised-button color="primary">Enviar Curriculo</button>
