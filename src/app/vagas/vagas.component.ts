@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VagasService } from './vagas.service';
 
 @Component({
   selector: 'app-vagas',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VagasComponent implements OnInit {
 
-  constructor() { }
+  ogVagas: any[];
+  vagas: any[];
+  salario;
+  area;
+
+  constructor(private vagasService: VagasService) { }
 
   ngOnInit() {
+    this.salario = 0;
+    this.area = '';
+    this.vagasService
+      .listVagas()
+      .subscribe((response) => {
+        this.ogVagas = response;
+        this.filterVagas(this.area, this.salario);
+      });
+  }
+
+  filterVagas(area, salario) {
   }
 
 }

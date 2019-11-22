@@ -18,7 +18,7 @@ export class CurriculosService {
   }
 
   getCurriculo(id: String): Observable<any> {
-    return this.http.get<any>(SERVER + '/curriculos/' + id);
+    return this.http.get<any>(SERVER + '/curriculo/' + id);
   }
 
   createCurriculo(curriculo: Curriculo) {

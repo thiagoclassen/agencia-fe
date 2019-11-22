@@ -10,13 +10,20 @@ import { MaterialModule } from "./material.module";
 import { VagasComponent } from './vagas/vagas.component';
 import { HttpClientModule } from "@angular/common/http";
 import { CurriculoFormComponent } from './curriculos/curriculo-form/curriculo-form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CurriculoEditComponent } from './curriculos/curriculo-edit/curriculo-edit.component';
+import { VagaEditComponent } from './vagas/vaga-edit/vaga-edit.component';
+import { VagaFormComponent } from './vagas/vaga-form/vaga-form.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     VagasComponent,
     CurriculosComponent,
-    CurriculoFormComponent
+    CurriculoFormComponent,
+    CurriculoEditComponent,
+    VagaEditComponent,
+    VagaFormComponent
   ],
   imports: [
     AppRoutingModule,
@@ -24,6 +31,8 @@ import { CurriculoFormComponent } from './curriculos/curriculo-form/curriculo-fo
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

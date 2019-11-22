@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from "@angular/forms";
+import { CurriculosService } from "../curriculos.service";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-curriculo-form',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurriculoFormComponent implements OnInit {
 
-  constructor() { }
+  curriculoForm;
 
-  ngOnInit() {
+  constructor(
+    private curriculosService: CurriculosService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) { 
+
+    this.curriculoForm = this.formBuilder.group({
+      nome : '',
+      contato : '',
+      area : '',
+      cargaHoraria : '',
+      salario : '',
+    });
+
+  }
+
+  ngOnInit() { }
+  
+  onSubmit(data){
+    
+    this.curriculosService.createCurriculo(data).subscribe(()=>this.router.navigateByUrl('/curriculos'));
   }
 
 }

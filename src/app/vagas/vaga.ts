@@ -1,19 +1,19 @@
-export class Curriculo {
+export class Vaga {
     id: number;
-    nome: string;
+    empresa: string;
     contato: string;
     area: string;
     cargaHoraria: string;
     salario: string;
 
     constructor(
-        nome?: string,
+        empresa?: string,
         contato?: string,
         area?: string,
         cargaHoraria?: string,
         salario?: string) {
 
-        this.nome = nome;
+        this.empresa = empresa;
         this.contato = contato;
         this.area = area;
         this.cargaHoraria = cargaHoraria;

@@ -1,7 +1,7 @@
-<form [formGroup]="curriculoForm" (ngSubmit)="onSubmit(curriculoForm.value)">
+<form [formGroup]="vagaForm" (ngSubmit)="onSubmit(vagaForm.value)">
     <div>
         <mat-form-field>
-            <input matInput placeholder="Nome" formControlName="nome" required>
+            <input matInput placeholder="Empresa" formControlName="empresa" required>
         </mat-form-field>
 
         <mat-form-field>
