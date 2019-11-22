@@ -27,6 +27,7 @@ export class VagaEditComponent implements OnInit {
       area: '',
       cargaHoraria: '',
       salario: '',
+      id: ''
     });
   }
 
@@ -42,12 +43,13 @@ export class VagaEditComponent implements OnInit {
         area : this.vaga.area,
         cargaHoraria : this.vaga.cargaHoraria,
         salario : this.vaga.salario,
+        id: this.vaga.id
       });
     });
   }
 
   onSubmit(data){
-    this.vagasService.createVaga(data).subscribe();
+    this.vagasService.updateVaga(data).subscribe();
   }
 
   toggleEdit(){

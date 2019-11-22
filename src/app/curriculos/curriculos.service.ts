@@ -25,6 +25,9 @@ export class CurriculosService {
     return this.http.post(SERVER + '/curriculos', curriculo);
   }
 
+  updateCurriculo(curriculo: Curriculo) {
+    return this.http.put(SERVER + '/curriculos', curriculo);
+  }
 
 
 }

@@ -22,4 +22,8 @@ export class VagasService {
   createVaga(vaga: Vaga) {
     return this.http.post(SERVER + '/vagas', vaga);
   }
+
+  updateVaga(vaga: Vaga) {
+    return this.http.put(SERVER + '/vagas', vaga);
+  }
 }
